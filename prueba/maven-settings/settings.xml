@@ -1,0 +1,30 @@
+<settings>
+
+  <servers>
+        <server>
+            <id>bkscoreruntime-local</id>
+            <username>atuser</username>
+            <password>atuser123</password>
+        </server>
+        <server>
+            <id>jmsadapter-snapshots-local</id>
+            <username>bkstooling</username>
+            <password>bkstooling123</password>
+        </server>
+        <server>
+            <id>plugins-snapshots-local</id>
+            <username>bkstooling</username>
+            <password>bkstooling123</password>
+        </server>
+        <server>
+    		<id>releases-local</id>
+    		<username>deployment</username>
+			<password>deployment</password>
+		</server>
+		<server>
+    		<id>releases-deploy</id>
+    		<username>deployment</username>
+			<password>deployment</password>
+		</server>
+    </servers>    
+ </settings>
