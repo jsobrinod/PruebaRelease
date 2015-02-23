@@ -49,8 +49,8 @@
 						so the modules are not installed, so the dependencies between modules are 
 						not met. With this configuration we force the module installation. -->
 					<!-- preparationGoals>clean deploy</preparationGoals-->
-					<username>bksplatform</username>
-					<password>bksplatform123</password>
+					<username>jsobrinod</username>
+					<password>17J03s81</password>
 				</configuration>
 				<dependencies>
 					<dependency>
