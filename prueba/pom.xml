@@ -38,6 +38,30 @@
 			<version>4.2.1</version>
 		</dependency>
 	</dependencies>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.5</version>
+				<configuration>
+					<!-- This is a 2.0 beta 6 bug. By default the goals are 'clean verify', 
+						so the modules are not installed, so the dependencies between modules are 
+						not met. With this configuration we force the module installation. -->
+					<!-- preparationGoals>clean deploy</preparationGoals-->
+					<username>bksplatform</username>
+					<password>bksplatform123</password>
+				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>org.apache.maven.scm</groupId>
+						<artifactId>maven-scm-provider-gitexe</artifactId>
+						<version>1.9.2</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+		</plugins>
+	</build>
 
 
 </project>
