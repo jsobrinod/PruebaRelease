@@ -20,7 +20,7 @@
 		<developerConnection>scm:git:https://github.com/jsobrinod/PruebaRelease.git</developerConnection>
 	</scm>
 
-	<distributionManagement>
+	<!-- distributionManagement>
 		<repository>
 			<id>releases-deploy</id>
 			<url>http://localhost:8081/nexus/content/repositories/releases</url>
@@ -29,7 +29,21 @@
 			<id>releases-deploy</id>
 			<url>http://localhost:8081/nexus/content/repositories/snapshots</url>
 		</snapshotRepository>
+	</distributionManagement-->
+	<distributionManagement>
+    	<repository>
+	        <id>bksplatform</id>
+	        <name>bksplatform-releases</name>
+	        <url>http://bksplatform.artifactoryonline.com/bksplatform/BKSRuntime-releases-local</url>
+    	</repository>
+    	<snapshotRepository>
+	        <id>bksplatform</id>
+	        <name>bksplatform-snapshots</name>
+	        <url>http://bksplatform.artifactoryonline.com/bksplatform/BKSRuntime-snapshots-local</url>
+    </snapshotRepository>
+    	
 	</distributionManagement>
+	
 
 	<dependencies>
 		<dependency>

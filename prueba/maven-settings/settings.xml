@@ -1,6 +1,11 @@
 <settings>
 
   <servers>
+  		<server>
+			<id>bksplatform</id>
+			<username>bksruntimecoredeployer</username>
+			<password>bksruntimecoredeployer123</password>
+		</server>
         <server>
             <id>bkscoreruntime-local</id>
             <username>atuser</username>
