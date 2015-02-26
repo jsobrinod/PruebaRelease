@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.jaime.prueba</groupId>
 	<artifactId>prueba</artifactId>
-	<version>1.5-SNAPSHOT</version>
+	<version>1.8</version>
 
 
 	<repositories>
@@ -27,7 +27,7 @@
 		<url>https://github.com/jsobrinod/PruebaRelease.git</url>
 		<connection>scm:git:https://github.com/jsobrinod/PruebaRelease.git</connection>
 		<developerConnection>scm:git:https://github.com/jsobrinod/PruebaRelease.git</developerConnection>
-	  <tag>HEAD</tag>
+	  <tag>prueba-1.8</tag>
   </scm>
 
 	<distributionManagement>
