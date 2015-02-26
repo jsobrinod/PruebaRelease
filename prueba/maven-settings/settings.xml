@@ -2,25 +2,15 @@
 
   <servers>
   		<server>
-			<id>bksplatform</id>
+			<id>bksplatform_deployer</id>
 			<username>bksruntimecoredeployer</username>
 			<password>bksruntimecoredeployer123</password>
 		</server>
-        <server>
-            <id>bkscoreruntime-local</id>
-            <username>atuser</username>
-            <password>atuser123</password>
-        </server>
-        <server>
-            <id>jmsadapter-snapshots-local</id>
-            <username>bkstooling</username>
-            <password>bkstooling123</password>
-        </server>
-        <server>
-            <id>plugins-snapshots-local</id>
-            <username>bkstooling</username>
-            <password>bkstooling123</password>
-        </server>
+		<server>
+			<id>bksplatform</id>
+			<username>bksruntimecore</username>
+			<password>bksruntimecore123</password>
+		</server>
         <server>
     		<id>releases-local</id>
     		<username>deployment</username>
