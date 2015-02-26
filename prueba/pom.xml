@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.jaime.prueba</groupId>
 	<artifactId>prueba</artifactId>
@@ -18,17 +19,17 @@
 		</repository>
 		<repository>
 			<id>bksruntime-snapshots-local</id>
-        	<name>bksruntime-snapshots-local</name>
-        	<url>http://bksplatform.artifactoryonline.com/bksplatform/BKSRuntime-snapshots-local</url>
+			<name>bksruntime-snapshots-local</name>
+			<url>http://bksplatform.artifactoryonline.com/bksplatform/BKSRuntime-snapshots-local</url>
 		</repository>
 	</repositories>
-	
+
 	<scm>
 		<url>https://github.com/jsobrinod/PruebaRelease.git</url>
 		<connection>scm:git:https://github.com/jsobrinod/PruebaRelease.git</connection>
 		<developerConnection>scm:git:https://github.com/jsobrinod/PruebaRelease.git</developerConnection>
-	  <tag>HEAD</tag>
-  </scm>
+		<tag>HEAD</tag>
+	</scm>
 
 	<distributionManagement>
 		<repository>
@@ -40,28 +41,16 @@
 			<url>http://localhost:8081/nexus/content/repositories/snapshots</url>
 		</snapshotRepository>
 	</distributionManagement>
-	<!-- distributionManagement>
-    	<repository>
-	        <id>bksplatform_deployer</id>
-	        <name>bksplatform-releases</name>
-	        <url>http://bksplatform.artifactoryonline.com/bksplatform/BKSRuntime-releases-local</url>
-    	</repository>
-    	<snapshotRepository>
-	        <id>bksplatform_deployer</id>
-	        <name>bksplatform-snapshots</name>
-	        <url>http://bksplatform.artifactoryonline.com/bksplatform/BKSRuntime-snapshots-local</url>
-    </snapshotRepository>	
-	</distributionManagement-->
-	
+	<!-- distributionManagement> <repository> <id>bksplatform_deployer</id> 
+		<name>bksplatform-releases</name> <url>http://bksplatform.artifactoryonline.com/bksplatform/BKSRuntime-releases-local</url> 
+		</repository> <snapshotRepository> <id>bksplatform_deployer</id> <name>bksplatform-snapshots</name> 
+		<url>http://bksplatform.artifactoryonline.com/bksplatform/BKSRuntime-snapshots-local</url> 
+		</snapshotRepository> </distributionManagement -->
 
-	<!-- dependencies>
-		<dependency>
-			<groupId>com.isb.bks.commons</groupId>
-			<artifactId>com.isb.bs.common.jar</artifactId>
-			<version>4.2.0</version>
-		</dependency>
-	</dependencies-->
-	
+
+	<!-- dependencies> <dependency> <groupId>com.isb.bks.commons</groupId> <artifactId>com.isb.bs.common.jar</artifactId> 
+		<version>4.2.0</version> </dependency> </dependencies -->
+
 	<profiles>
 		<profile>
 			<id>Release</id>
@@ -94,7 +83,7 @@
 			</build>
 		</profile>
 	</profiles>
-	
+
 	<build>
 		<plugins>
 			<plugin>
@@ -110,16 +99,16 @@
 						</goals>
 						<configuration>
 							<file>${basedir}/src/p.jar</file>
-							<!-- pomFile>${basedir}/src/assembly/pom-singleton-rigel.xml</pomFile-->
+							<!-- pomFile>${basedir}/src/assembly/pom-singleton-rigel.xml</pomFile -->
 							<artifactId>p-prueba</artifactId>
 							<groupId>com.jaime.prueba</groupId>
 							<packaging>jar</packaging>
 							<version>${project.version}</version>
 							<sources>q.jar</sources>
 							<javadoc>r.jar</javadoc>
-							<!-- repositoryId>bksplatform_deployer</repositoryId-->
-							<!-- url>http://localhost:8081/nexus/content/repositories/snapshots/</url-->
-							<!-- url>${project.distributionManagement.repository.url}</url-->
+							<!-- repositoryId>bksplatform_deployer</repositoryId -->
+							<!-- url>http://localhost:8081/nexus/content/repositories/snapshots/</url -->
+							<!-- url>${project.distributionManagement.repository.url}</url -->
 						</configuration>
 					</execution>
 				</executions>
@@ -131,7 +120,7 @@
 					<!-- This is a 2.0 beta 6 bug. By default the goals are 'clean verify', 
 						so the modules are not installed, so the dependencies between modules are 
 						not met. With this configuration we force the module installation. -->
-					<!-- preparationGoals>clean deploy</preparationGoals-->
+					<!-- preparationGoals>clean deploy</preparationGoals -->
 					<username>jsobrinod</username>
 					<password>17J03s81</password>
 				</configuration>
@@ -145,6 +134,23 @@
 			</plugin>
 		</plugins>
 	</build>
-
+	<pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<executions>
+					<execution>
+						<!-- This id must match the -Prelease-profile id value or else sources 
+							will be "uploaded" twice, which causes Nexus to fail -->
+						<id>Release</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</pluginManagement>
 
 </project>
