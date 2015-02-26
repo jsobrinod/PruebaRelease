@@ -104,8 +104,6 @@
 							<groupId>com.jaime.prueba</groupId>
 							<packaging>jar</packaging>
 							<version>${project.version}</version>
-							<sources>q.jar</sources>
-							<javadoc>r.jar</javadoc>
 							<!-- repositoryId>bksplatform_deployer</repositoryId -->
 							<!-- url>http://localhost:8081/nexus/content/repositories/snapshots/</url -->
 							<!-- url>${project.distributionManagement.repository.url}</url -->
@@ -133,23 +131,5 @@
 				</dependencies>
 			</plugin>
 		</plugins>
-		<pluginManagement>
-			<plugins>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-source-plugin</artifactId>
-					<executions>
-						<execution>
-							<!-- This id must match the -Prelease-profile id value or else sources 
-								will be "uploaded" twice, which causes Nexus to fail -->
-							<id>Release</id>
-							<goals>
-								<goal>jar</goal>
-							</goals>
-						</execution>
-					</executions>
-				</plugin>
-			</plugins>
-		</pluginManagement>
 	</build>
 </project>
