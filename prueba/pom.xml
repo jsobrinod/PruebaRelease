@@ -54,13 +54,13 @@
 	</distributionManagement-->
 	
 
-	<dependencies>
+	<!-- dependencies>
 		<dependency>
 			<groupId>com.isb.bks.commons</groupId>
 			<artifactId>com.isb.bs.common.jar</artifactId>
 			<version>4.2.0</version>
 		</dependency>
-	</dependencies>
+	</dependencies-->
 	
 	<profiles>
 		<profile>
