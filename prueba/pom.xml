@@ -96,8 +96,8 @@
 					<groupId>com.jaime.prueba</groupId>
 					<packaging>jar</packaging>
 					<version>${project.version}</version>
-					<!-- repositoryId>releases-local</repositoryId>
-					<url>http://localhost:8081/nexus/content/repositories/snapshots/</url-->
+					<repositoryId>releases-local</repositoryId>
+					<url>http://localhost:8081/nexus/content/repositories/snapshots/</url>
 					<!-- url>${project.distributionManagement.repository.url}</url -->
 				</configuration>
 			</plugin>
