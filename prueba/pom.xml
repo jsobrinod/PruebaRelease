@@ -59,7 +59,7 @@
 						<artifactId>maven-deploy-plugin</artifactId>
 						<version>2.8.2</version>
 						<configuration>
-							<file>${basedir}/target/checkout/rigel-bpr/src/p.jar</file>
+							<file>${basedir}/target/checkout/prueba/src/p.jar</file>
 							<repositoryId>releases-deploy</repositoryId>
 							<url>${project.distributionManagement.repository.url}</url>
 							<version>${MVN_RELEASE_VERSION}</version>
