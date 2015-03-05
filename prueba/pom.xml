@@ -59,8 +59,10 @@
 						<artifactId>maven-deploy-plugin</artifactId>
 						<version>2.8.2</version>
 						<configuration>
+							<file>${basedir}/target/checkout/rigel-bpr/src/p.jar</file>
 							<repositoryId>releases-deploy</repositoryId>
 							<url>${project.distributionManagement.repository.url}</url>
+							<version>${MVN_RELEASE_VERSION}</version>
 						</configuration>
 					</plugin>
 				</plugins>
@@ -74,8 +76,10 @@
 						<artifactId>maven-deploy-plugin</artifactId>
 						<version>2.8.2</version>
 						<configuration>
+							<file>${basedir}/src/p.jar</file>
 							<repositoryId>releases-deploy</repositoryId>
 							<url>${project.distributionManagement.snapshotRepository.url}</url>
+							<version>${project.version}</version>
 						</configuration>
 					</plugin>
 				</plugins>
@@ -90,12 +94,11 @@
 				<artifactId>maven-deploy-plugin</artifactId>
 				<version>2.8.2</version>
 				<configuration>
-					<file>${basedir}/src/p.jar</file>
 					<!-- pomFile>${basedir}/src/assembly/pom-singleton-rigel.xml</pomFile -->
 					<artifactId>p-prueba</artifactId>
 					<groupId>com.jaime.prueba</groupId>
 					<packaging>jar</packaging>
-					<version>${project.version}</version>
+					
 					<!-- repositoryId>releases-local</repositoryId>
 					<url>http://localhost:8081/nexus/content/repositories/snapshots/</url-->
 					<!-- url>${project.distributionManagement.repository.url}</url -->
